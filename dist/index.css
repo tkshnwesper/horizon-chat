@@ -1,0 +1,28 @@
+div.messages {
+    display: block;
+    background-color: lightblue;
+}
+
+div.fbox {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    height: auto;
+}
+
+div.messages {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+div.mbox {
+    display: flex;
+}
+
+input.mfield {
+    flex-grow: 1;
+}

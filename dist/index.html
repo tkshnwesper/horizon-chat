@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/horizon/horizon.js"></script>
+    <script src="bower_components/vue/dist/vue.min.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="fbox">
+      <div class="messages">
+        <div v-for="msg in messageList">
+          <span class='date'>
+            [{{ msg.datetime.toLocaleString() }}]&nbsp;
+          </span>
+          <span class="message">
+            {{ msg.text }}
+          </span>
+        </div>
+      </div>
+      <form class="mform">
+        <div class="mbox">
+          <input class="mfield">
+          <button class"send" onclick="sendMessage()">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
