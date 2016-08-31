@@ -15,7 +15,7 @@ horizon.onReady(function() {
         }
     });
 
-    messages.order("datetime", "descending").limit(50).watch().subscribe((docs) => {
+    messages.order("datetime", "ascending").limit(50).watch().subscribe((docs) => {
         mlist.messageList = docs;
     });
 
